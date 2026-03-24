@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>images/icons/1.png</file>
+    <file>images/icons/face recog icon.jpg</file>
+    <file>images/icons/padlock.png</file>
+    <file>images/icons/eye.png</file>
+    <file>images/icons/eye.png</file>
+    <file>images/icons/logout.png</file>
+    <file>images/icons/setting.png</file>
+    <file>images/icons/group.png</file>
+    <file>images/icons/dashboard.png</file>
+    <file>images/icons/admin.png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>images/1.png</file>
+    <file>images/face recog icon.jpg</file>
+  </qresource>
+</RCC>
