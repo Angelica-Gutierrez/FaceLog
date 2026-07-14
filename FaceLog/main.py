@@ -90,10 +90,10 @@ class UserScreen(QMainWindow):
                 dbname='Facelog',
                 user='postgres',
                 password='password',
-                port=5433
+                port=5432
             )
             cursor = conn.cursor()
-            cursor.execute("SELECT firstname, face_data, face_image FROM users")
+            cursor.execute("SELECT first_name, face_data, face_image FROM users")
             results = cursor.fetchall()
             cursor.close()
             conn.close()
@@ -217,10 +217,10 @@ class UserScreen(QMainWindow):
                 dbname='Facelog',
                 user='postgres',
                 password='password',
-                port=5433
+                port=5432
             )
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM users WHERE firstname = %s", (name,))
+            cursor.execute("SELECT * FROM users WHERE first_name = %s", (name,))
             user_data = cursor.fetchone()
             cursor.close()
             conn.close()
@@ -345,7 +345,7 @@ class RegistrationScreen(QMainWindow):
             dbname='Facelog',
             user='postgres',
             password='password',
-            port=5433
+            port=5432
         )
 
     def update_age(self):
@@ -682,7 +682,7 @@ class RegistrationScreen(QMainWindow):
 
             cursor.execute(
                 """INSERT INTO users (
-                    firstname, lastname, email, phone_number, birthdate, age, gender, 
+                    first_name, lastname, email, phone_number, birthdate, age, gender, 
                     work_status, civil_status, mother_firstname, mother_lastname, 
                     father_firstname, father_lastname, guardian_firstname, guardian_lastname,
                     street_temp, barangay_temp, city_temp, state_temp, zip_code_temp,
